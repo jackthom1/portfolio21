@@ -1,0 +1,20 @@
+extends common/head
+
+
+block content
+    main(data-barba='container' data-barba-namespace='Artist-Detox')
+        a.backButton(href='/' aria-label='back')
+            i.fas.fa-times
+        section.portfolio.portfolio__hero
+            h1.portfolio__title.portfolio__title--mid Ocean Youth
+            p.portfolio__info 
+                A multi-page site for a youth radio station for listeners to tune in. Built with html, SCSS & JS. 
+                span Unused
+                a.portfolio__button(href='https://github.com/jackthom1/oceanYouth' target='_blank' aria-label='github')
+                    i.fab.fa-github
+            img.portfolio__image.portfolio__image--hero(loading='lazy' src='./images/oceanYouth/oceanYouthLaptop.jpg' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--heroTwo(loading='lazy' src='./images/oceanYouth/oceanYouthPhone.jpg' alt='Laptop showing Artist Detox Website')
+        section.portfolio.portfolio__content
+            img.portfolio__image.portfolio__image--one(loading='lazy' src='./images/oceanYouth/oceanYouthMac.png' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--two(loading='lazy' src='./images/oceanYouth/oceanYouthIphoneAlt.png' alt='Iphone showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--three(loading='lazy' src='./images/oceanYouth/oceanYouthImac.png' alt='Ipad showing Artist Detox Website')

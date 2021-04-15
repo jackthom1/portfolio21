@@ -1,0 +1,22 @@
+extends common/head
+
+
+block content
+    main(data-barba='container' data-barba-namespace='Artist-Detox')
+        a.backButton(href='/' aria-label='back')
+            i.fas.fa-times
+        section.portfolio.portfolio__hero
+            h1.portfolio__title.portfolio__title--sml Sound Communities
+            p.portfolio__info 
+                A multi-page site for a CIC to show their projects & achievements. Built in HTML, SCSS & JS. 
+                span Unused
+                a.portfolio__button(href='https://github.com/jackthom1/soundCommunities' aria-label='github' target='_blank')
+                    i.fab.fa-github
+                a.portfolio__button(href='http://jacksstagingsite.rf.gd/' target='_blank' aria-label='external site')
+                    i.fas.fa-external-link-alt
+            img.portfolio__image.portfolio__image--hero(loading='lazy' src='./images/soundCommunities/soundCommunitiesLaptop.jpg' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--heroTwo(loading='lazy' src='./images/soundCommunities/soundCommunitiesPhone.jpg' alt='Laptop showing Artist Detox Website')
+        section.portfolio.portfolio__content
+            img.portfolio__image.portfolio__image--one(loading='lazy' src='./images/soundCommunities/soundCommunitiesMacAlt.png' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--two(loading='lazy' src='./images/soundCommunities/soundCommunitiesIphone.png' alt='Iphone showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--three(loading='lazy' src='./images/soundCommunities/soundCommunitiesImac.png' alt='Ipad showing Artist Detox Website')

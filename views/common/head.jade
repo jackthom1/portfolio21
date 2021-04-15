@@ -1,0 +1,41 @@
+doctype html
+html 
+    head 
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        // TITLE & METADATA
+        title Jack Thompson - #{pageDesk}
+        meta(name='description' content='#{pageDesk}')
+        meta(name='keywords' content='Freelance, Web development, Web Design, portfolio, developer, Javascript, JS, HTML, CSS, SCSS')
+        meta(name='author' content='Jack Thompson')
+
+        // FACEBOOK / TWITTER TAGS
+        meta(property='og:title' content='Jack Thompson - @@pageTitle')
+        meta(property='og:description' content='#{pageDesk}')
+        meta(property='og:image' content='')
+        meta(property='og:url' content='')
+        meta(property='og:type' content='website')
+        meta(property='og:site_name' content='Jack Thompson')
+        meta(name='twitter:card' content='summary_large_image')
+        meta(name='twitter:image:alt' content='IMAGE ALT TEXT')
+
+        // FAVICON \\
+        link(rel='icon' href='' type='image/gif' sizes='16x16')
+
+        // STYLESHEET LINKS \\
+        link(rel='stylesheet' href='/stylesheets/style.css')
+
+        //JAVASCRIPT \\
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js' defer)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollToPlugin.min.js' defer)
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js' defer)
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css' integrity='sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==' crossorigin='anonymous')
+        script(src='/javascripts/index.js' defer)
+        
+    body(data-barba="wrapper")
+
+        .newPageLoad 
+            .loadingCover 
+        block content
+    

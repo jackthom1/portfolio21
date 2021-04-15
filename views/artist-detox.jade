@@ -1,0 +1,22 @@
+extends common/head
+
+
+block content
+    main(data-barba='container' data-barba-namespace='Artist-Detox')
+        a.backButton(href='/' aria-label='back')
+            i.fas.fa-times
+        section.portfolio.portfolio__hero
+            h1.portfolio__title Artist Detox
+            p.portfolio__info 
+                A 5 page website to host a small radio show.
+                span 
+                a.portfolio__button(href='https://github.com/jackthom1/ArtistDetox' target='_blank' aria_label='github')
+                    i.fab.fa-github
+                a.portfolio__button(href='https://artistdetox.co.uk' target='_blank' aria-label='external website')
+                    i.fas.fa-external-link-alt
+            img.portfolio__image.portfolio__image--hero(loading='lazy' src='./images/artistDetox/artistDetox.jpg' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--heroTwo(loading='lazy' src='./images/artistDetox/artistDetoxPhoneAlt.png' alt='Laptop showing Artist Detox Website')
+        section.portfolio.portfolio__content
+            img.portfolio__image.portfolio__image--one(loading='lazy' src='./images/artistDetox/artistDetoxImac.png' alt='Laptop showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--two(loading='lazy' src='./images/artistDetox/artistDetoxSamsung.png' alt='Iphone showing Artist Detox Website')
+            img.portfolio__image.portfolio__image--three(loading='lazy' src='./images/artistDetox/artistDetoxMac.png' alt='Ipad showing Artist Detox Website')

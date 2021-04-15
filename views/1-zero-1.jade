@@ -1,0 +1,20 @@
+extends common/head
+
+
+block content
+    main(data-barba='container' data-barba-namespace='Artist-Detox')
+        a.backButton(href='/' aria-label='back')
+            i.fas.fa-times
+        section.portfolio.portfolio__hero
+            h1.portfolio__title.portfolio__title--sml 1 Zero 1
+            p.portfolio__info 
+                | A multi page website for an IT Support Business. Built using Wordpress.
+                span
+                a.portfolio__button(href='https://1-zero-1.co.uk' target='_blank' aria-label='external website')
+                    i.fas.fa-external-link-alt
+            img.portfolio__image.portfolio__image--hero(loading='lazy' src='./images/1-zero-1/1-zero-1Laptop.jpg' alt='Laptop showing 1-Zero-1 Website')
+            img.portfolio__image.portfolio__image--heroTwo(loading='lazy' src='./images/1-zero-1/1-zero-1Phone.jpg' alt='Phone showing 1-zero-1 Website')
+        section.portfolio.portfolio__content
+            img.portfolio__image.portfolio__image--one(loading='lazy' src='./images/1-zero-1/1-zero-1Mac.png' alt='Laptop showing 1-Zero-1 Website')
+            img.portfolio__image.portfolio__image--two(loading='lazy' src='./images/1-zero-1/1-zero-1Iphone.png' alt='Iphone showing 1-Zero-1 Website')
+            img.portfolio__image.portfolio__image--three(loading='lazy' src='./images/1-zero-1/1-zero-1Imac.png' alt='Ipad showing 1-Zero-1 Website')

@@ -1,0 +1,65 @@
+extends common/head
+
+
+block content
+  b(style='display: none;') Home
+  main(data-barba='container' data-barba-namespace='home')
+    section.hero
+      if message 
+            p #{message}
+      .background__box.hero__background
+      h1.title.hero__title
+        | Jack 
+        span.hero__title__second Thompson
+      h3.hero__subtitle.subtitle--bold Freelance Web Design & Development
+      nav.nav.hero__nav
+        ul.nav__list
+          li.nav__links
+            a(href='#projects') > Projects
+          li.nav__links
+            a(href='#about') > About Me
+          li.nav__links
+            a(href='#contact') > Contact
+    section#projects.projects.projects__section
+      h2.title.hero__title.projects__title Projects
+      a(href='./artist-detox')
+        .projects__container.projects__container--even.a
+          img.image.projects__image(src='./images/artistDetox/artistDetoxImac.png' alt='Laptop showing project website' loading='lazy')
+          h2.subtitle.projects__subtitle Artist Detox
+      a(href='./1-zero-1')
+        .projects__container.projects__container--odd.b
+          img.image.projects__image(src='./images/1-zero-1/1-zero-1Mac.png' alt='Laptop showing project website' loading='lazy')
+          h2.subtitle.projects__subtitle 1-Zero-1
+      a(href='./sound-communities')
+        .projects__container.projects__container--even.c
+          img.image.projects__image(src='./images/soundCommunities/soundCommunitiesImac.png' alt='Computer showing project website' loading='lazy')
+          h2.subtitle.projects__subtitle.projects__subtitle--sml Sound Communities
+      a(href='./ocean-youth')
+        .projects__container.projects__container--odd.d
+          img.image.projects__image(src='./images/oceanYouth/oceanYouthIphone.png' alt='Phone showing project website' loading='lazy')
+          h2.subtitle.projects__subtitle Ocean Youth
+      
+    section#about.about.about__section 
+      h2.title.hero__title.about__title About Me
+      p.about__text
+        | Hi! My Name is Jack and i'm a freelance web developer. I strive to build creative and interesting websites
+        | that connect you and your customers.
+      img.image.about__image(src="./images/me.jpg", alt="Portrait of me with long brown hair and a light pink cactus shirt")
+      p.about__text
+        | I've been developing websites for nearly 2 years, and i'm always learning and improving my skills so I can create more complex 
+        | and exciting websites.
+    
+    
+    section#contact.contact.contact__section
+      h2.subtitle.contact__title Let's talk about your next project
+      form.contact__form(action="", method="post") 
+        div.contact__form__container
+          label.contact__label(for="email") Email 
+          input.contact__input(type="email", name="email" required)
+        div.contact__form__container
+          label.contact__label(for="message") Message 
+          textarea.contact__input(name="message", cols="30", rows="10" required) 
+        button.button.contact__button(type="submit") Send
+
+    footer.footer 
+      p.footer__text ©2021 Jack Thompson:)
