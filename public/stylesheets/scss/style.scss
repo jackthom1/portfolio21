@@ -1,8 +1,9 @@
 // SETUP VARIABLES AND FONTS \\
 
 @font-face {
-  font-family: athene;
+  font-family: monique;
   src: url("./monique.ttf");
+  src: url("./monique.otf") format("opentype");
 }
 @font-face {
   font-family: courierNew;
@@ -18,8 +19,8 @@
   // --clr-text: #312f2f;
   // --clr-white: #ffffff;
 
-  --primary-font: athene, sans-serif;
-  --second-font: courierNew;
+  --primary-font: monique, sans-serif;
+  --second-font: courierNew, sans-serif;
 }
 
 * {
@@ -40,7 +41,7 @@ h1,
 h2 {
   color: var(--clr-heading);
   font-family: var(--primary-font);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 p,
@@ -220,8 +221,6 @@ h3 {
     text-decoration: none;
   }
   &__title {
-    opacity: 0.5;
-    // filter: blur(0.2rem);
   }
   &__container {
     margin-top: 1rem;
@@ -460,17 +459,20 @@ h3 {
     justify-content: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    &__title,
+    &__title {
+      font-size: 7rem;
+      left: 10%;
+    }
+    &__heading,
     &__subtitle {
       position: relative;
       left: 0;
       top: 0;
     }
-    &__title {
+    &__heading {
       transform: none;
-      font-size: 7rem;
     }
+
     &__subtitle {
       max-width: 50ch;
     }
@@ -499,31 +501,14 @@ h3 {
       grid-template-columns: 1fr 1fr;
       row-gap: 2.5rem;
     }
-    // &__image {
-    //   filter: blur(0rem);
-    //   &:hover {
-    //     filter: blur(0rem);
-    //   }
-    //   &:hover + .projects__subtitle {
-    //     z-index: -1;
-    //   }
-    // }
     &__subtitle {
       width: 6ch;
       text-indent: 0;
       text-align: center;
-      // z-index: -1;
-      // &:hover {
-      //   z-index: -1;
-      // }
-
       &--sml {
         font-size: 3rem;
         text-align: center;
       }
-    }
-    &__title {
-      display: none;
     }
   }
 
@@ -583,6 +568,10 @@ h3 {
   .hero {
     &__title {
       font-size: 10rem;
+      left: 5%;
+    }
+    &__heading {
+      left: 0;
     }
     &__subtitle {
       font-size: 2rem;
@@ -597,15 +586,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     &__title {
-      filter: blur(0rem);
-      opacity: 1;
-      display: inline;
-      transform: rotate(90deg);
-      transform-origin: left top;
-      position: absolute;
-      top: 10%;
-      left: 150%;
-      white-space: nowrap;
+      left: 15%;
     }
     &__container {
       flex-direction: row;
@@ -707,13 +688,25 @@ h3 {
 }
 
 @media (min-width: 1440px) {
+  .hero {
+    &__title {
+      left: 0;
+    }
+  }
   .nav {
     &__links {
       font-size: 1.8rem;
     }
   }
-
+  .portfolio {
+    &__image {
+      width: 50%;
+    }
+  }
   .projects {
+    &__title {
+      left: 20%;
+    }
     &__subtitle {
       &--sml {
         left: -5%;
