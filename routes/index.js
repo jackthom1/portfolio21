@@ -14,29 +14,34 @@ router.route('/')
   .post([check('message').escape()],(req, res, next)=>{
     let message = req.body.message
     let email = req.body.email
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+
+    if (!message || !email){
+      res.status(500)
+      res.render('error')
+    } else {
+      let transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+              user: process.env.EMAIL,
+              pass: process.env.PASSWORD
+          }
+      })
+      let info = {
+          from: `Website Enquiry`,
+          to: "jothom111@gmail.com",
+          subject: "Website Message",
+          html: `<p>${message}</p><p>From: ${email}</p>`
+      };
+      transporter.sendMail(info, (err, data) =>{
+        if (err){
+          res.status(500)
+          res.render('error', {error: err})
+        } else{
+          res.render('index', {message: "Thanks for your message :)"})
         }
+      });
+    }
     })
-    let info = {
-        from: `Website Enquiry`,
-        to: "jothom111@gmail.com",
-        subject: "Website Message",
-        html: `<p>${message}</p><p>From: ${email}</p>`
-    };
-    transporter.sendMail(info, (err, data) =>{
-      if (err){
-        res.status(500)
-        res.render('error', {error: err})
-      } else{
-        res.render('index', {message: "Thanks for your message :)"})
-      }
-        
-    });
-  })
 
 
 router.get('/artist-detox', (req, res)=>{
